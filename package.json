@@ -30,6 +30,9 @@
     "build:types": "dts-bundle-generator -o dist/index.d.ts src/index.ts --no-banner",
     "build:clean": "rm -rf dist && npm run build",
     "prepublishOnly": "npm run build:clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "changeset": "changeset",
     "version": "changeset version",
     "release": "changeset publish"
@@ -70,9 +73,12 @@
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.7",
     "@types/node": "^24.10.1",
+    "@vitest/coverage-v8": "^4.0.16",
     "dts-bundle-generator": "^9.5.1",
     "esbuild": "^0.27.0",
-    "typescript": "^5.9.3"
+    "msw": "^2.12.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
   },
   "dependencies": {
     "valibot": "^1.2.0"
